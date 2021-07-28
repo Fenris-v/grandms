@@ -41,6 +41,9 @@
       p
         @include font($white, $bold, 700, 18px, 1.2)
 
+.s_services
+  margin-bottom: 100px
+
 .services
   display: flex
 
@@ -121,3 +124,109 @@
         top: 0
         bottom: 0
         z-index: -1
+
+.s_cases
+  background: #F3F3F3
+
+  .wrapper
+    &_fullHD
+      background: url("../images/main/cases_bg.jpg") no-repeat
+      background-size: cover
+      padding: 70px 0 140px
+
+.cases
+  &__title
+    +space
+    align-items: center
+    margin-bottom: 70px
+
+  .innerTitle
+    margin-bottom: 0
+
+  &__container
+    display: flex
+
+  p
+    text-align: center
+    @include font($white, $regular, 600, 20px, $line: 1.5)
+    max-width: 450px
+
+  &_left
+    width: 35%
+
+    &_big
+      width: 100%
+      +center
+      height: 430px
+      flex-direction: column
+      background-position: center center !important
+      background-size: cover !important
+      padding: 20px
+
+      &:not(:last-child)
+        margin-bottom: 20px
+
+    &_small
+      width: 100%
+      margin-bottom: 20px
+      height: 310px
+      +center
+      flex-direction: column
+      background-position: center center !important
+      background-size: cover !important
+      text-align: center
+      padding: 20px
+
+      &__container
+        +space
+
+        > div
+          width: 50%
+
+          &:first-child
+            padding-right: 10px
+
+            .cases_left_small
+              .services__title
+                margin-bottom: 0
+
+          &:last-child
+            padding-left: 10px
+
+  &_right
+    width: 65%
+    padding-left: 20px
+
+    &_top
+      height: 540px
+      +center
+      flex-direction: column
+      text-align: center
+      margin-bottom: 20px
+
+    &_bottom
+      height: 650px
+      display: flex
+
+      &_small
+        height: 315px
+        +center
+        flex-direction: column
+        text-align: center
+        padding: 20px
+
+        &:first-child
+          margin-bottom: 20px
+
+        &__container
+          width: 330px
+          margin-right: 20px
+          flex-shrink: 0
+          height: 100%
+
+      &_big
+        width: 100%
+        +center
+        flex-direction: column
+        text-align: center
+        padding: 20px
