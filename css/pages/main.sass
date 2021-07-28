@@ -1,0 +1,123 @@
+.s_hero
+  .wrapper
+    &_fullHD
+      background-size: cover
+      padding: 260px 0 40px
+      background: url("../images/main/hero_bg.jpg") no-repeat
+      background-size: cover
+      background-position-x: 90%
+
+.hero
+  hr
+    max-width: 1010px
+
+  h1
+    max-width: 1100px
+
+  &__buttons
+    margin-bottom: 90px
+
+    .btn:first-child
+      margin-right: 10px
+
+  &__advantages
+    margin: 0
+    display: flex
+    align-items: center
+    padding: 40px 0 0
+
+    li
+      display: flex
+      align-items: center
+
+      &:not(:last-child)
+        margin-right: 90px
+
+      img
+        margin-right: 30px
+        flex-shrink: 0
+        width: 55px
+
+      p
+        @include font($white, $bold, 700, 18px, 1.2)
+
+.services
+  display: flex
+
+  h2
+    @include font($textBlack, $bold, 700, 55px)
+    margin: 70px 40px 80px 90px
+
+  &_left
+    width: 67%
+    padding-right: 20px
+    display: flex
+    flex-direction: column
+
+  &__main
+    background: #b93a57 url("../images/main/service1.jpg") no-repeat
+    background-size: cover
+    padding: 50px 60px
+    flex-grow: 1
+
+  &__title
+    @include font($white, $bold, 700, 42px, 1.05)
+    width: min-content
+    margin-bottom: 30px
+
+  p
+    @include font($white, $regular, 600, 20px, 1.3)
+    width: 400px
+    max-width: 100%
+    margin-bottom: 30px
+
+  ul
+    margin: 0
+    padding: 0 0 0 20px
+
+  li
+    @include font($white, $regular, 600, 20px)
+    margin-bottom: 20px
+
+  &__offer
+    padding: 60px
+    +space
+    flex-wrap: wrap
+    border: 1px solid $grey
+    border-top: none
+
+    p
+      @include font($textBlack, $regular, 600, 32px)
+      display: flex
+      align-items: center
+      width: auto
+      margin-bottom: 0
+
+      svg
+        margin-right: 30px
+
+  &_right
+    width: 33%
+
+    img
+      height: 100%
+
+  &__additional
+    position: relative
+
+    &:first-child
+      margin-top: 210px
+      padding: 230px 50px 50px
+      background: url("../images/main/service2.jpg") no-repeat
+      background-size: cover
+      margin-bottom: 20px
+
+    &:last-child
+      padding: 100px 50px 50px
+
+      img
+        position: absolute
+        left: 0
+        top: 0
+        bottom: 0
+        z-index: -1

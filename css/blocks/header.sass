@@ -1,0 +1,58 @@
+header
+  position: fixed
+  z-index: 10
+  width: 100%
+  border-bottom: 1px solid rgba(196, 196, 196, 0.2)
+  +transition
+
+  &.bg
+    background: #0F2235
+    +transition
+
+.header
+  padding: 40px 0
+  +space
+  align-items: center
+
+  nav
+    ul
+      display: flex
+      align-items: center
+      margin: 0
+      padding: 0
+
+      li
+        a
+          @include font($white, $bold, 700, 16px)
+
+        &:not(:last-child)
+          margin-right: 40px
+
+  .btn_pink
+    padding: 0 30px
+
+.socials
+  display: flex
+  align-items: center
+
+  li:not(:last-child)
+    margin-right: 15px
+
+  a
+    width: 60px
+    height: 60px
+    +round
+    border: 1px solid rgba(255, 255, 255, .2)
+    +center
+
+    img
+      max-width: 25px
+      max-height: 25px
+
+.phone
+  @include font($white, $bold, 700, 24px)
+
+.slogan
+  @include font($white, $regular, 500, 20px, 1.5)
+  max-width: 740px
+  margin-bottom: 50px

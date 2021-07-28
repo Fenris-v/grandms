@@ -1,0 +1,138 @@
+*
+  +box
+
+body
+  max-width: 100%
+  display: flex
+  flex-direction: column
+  @include font()
+  margin: 0
+  overflow-x: hidden
+
+.wrapper
+  max-width: 1700px
+  padding: 0 20px
+  +box
+  margin: 0 auto
+
+  &_fullHD
+    max-width: 1920px
+    margin: 0 auto
+    position: relative
+    overflow-x: hidden
+
+p
+  margin: 0
+
+h1
+  @include font($white, $bold, 700, 85px)
+  margin: 0 0 50px
+
+.innerTitle
+  @include font($textBlack, $regular, 400, 72px, 1)
+  margin: 0 0 70px
+
+.subtitle
+  @include font($textBlack, $regular, 400, 220px, 1)
+  position: absolute
+  z-index: -1
+  top: -15px
+
+.btn
+  display: inline-flex
+  padding: 0 60px
+  @include font($white, $bold, 700, 14px, 70px)
+  text-transform: uppercase
+  white-space: nowrap
+  text-decoration: none
+  +transition
+  +border-radius(40px)
+  +box
+
+  &:hover
+    +transition
+    opacity: 0.8
+
+  &_border
+    border: 2px solid $white
+
+  &_burger
+    padding: 0 25px
+    line-height: 60px
+    +center
+    text-transform: none
+    font-size: 16px
+
+    &::before
+      content: url("../images/drag_handle_24px.svg")
+      margin-right: 15px
+      line-height: 1
+
+  &_pink
+    border: 2px solid $pink
+    background: $pink
+
+.no_list
+  list-style-type: none
+
+.no_decor
+  text-decoration: none
+
+hr
+  height: 1px
+  border: none
+  margin: 0
+  padding: 0
+  background: rgba(196, 196, 196, 0.2)
+
+//.slick-slide
+//  &:focus
+//    outline: none
+//
+//.slick-dots
+//  padding: 0
+//  +center
+//  list-style: none
+//  margin: 90px 0 0
+//
+//  li
+//    width: 30px
+//    +center
+//
+//    button
+//      padding: 0
+//      font-size: 0
+//      border: none
+//      background: #9F9F9F
+//      width: 12px
+//      height: 12px
+//      +border-radius(6px)
+//      opacity: 0.2
+//      +transition
+//
+//      &:focus
+//        outline: none
+//
+//    &.slick-active
+//      button
+//        +transition
+//        width: 100%
+//        background: #FECA8B
+//        opacity: 1
+//
+//.slick-arrow
+//  border: none
+//  background: none
+//  position: absolute
+//  cursor: pointer
+//  top: -190px
+//
+//  &:focus
+//    outline: none
+//
+//  &.slick-next
+//    right: 0
+//    +transform(rotate(180deg))
+//
+//  &.slick-prev
+//    right: 90px
