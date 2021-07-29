@@ -127,6 +127,7 @@
 
 .s_cases
   background: #F3F3F3
+  margin-bottom: 100px
 
   .wrapper
     &_fullHD
@@ -230,3 +231,146 @@
         flex-direction: column
         text-align: center
         padding: 20px
+
+.s_trust
+  margin-bottom: 100px
+
+.s_feedbacks
+  background: #F3F3F3
+
+  .wrapper
+    &_fullHD
+      background: url("../images/main/feedbacks_bg.jpg")
+      padding: 80px 0 70px
+
+.feedbacks
+  .innerTitle
+    max-width: 1040px
+
+  &__slide
+    background: $white
+    padding: 45px 0 20px
+    position: relative
+
+    &__wrapper
+      padding: 0 45px
+
+      &:last-child
+        +space
+
+        p
+          opacity: 0.7
+
+    p
+      @include font($textBlack, $regular, 500, 18px, 1.6)
+
+    svg
+      position: absolute
+      top: 0
+      right: 50px
+
+    hr
+      margin: 30px 0 20px
+
+  &__title
+    @include font($textBlack, $bold, 700, 30px, 1.2)
+    margin-bottom: 20px
+
+.s_about
+  .innerTitle
+    padding-top: 90px
+
+.about
+  +space
+
+  &_half
+    width: 50%
+    min-height: 860px
+    overflow: hidden
+
+    &:last-child
+      padding-left: 80px
+
+  img
+    position: absolute
+
+    &:first-child
+      left: 0
+      top: 0
+      height: 375px
+      z-index: 5
+
+    &:nth-child(2)
+      position: static
+      display: block
+      margin-top: 100px
+
+    &:nth-child(3)
+      left: 0
+      top: 375px
+      z-index: 5
+
+    &:nth-child(4)
+      left: 150px
+      z-index: 3
+
+  p
+    @include font($textBlack, $regular, 500, 18px, 1.5)
+    margin-bottom: 40px
+
+  &__statistic
+    display: flex
+    align-items: flex-start
+
+    p
+      @include font($textBlack, $regular, 500, 15px, 1.5)
+
+    a
+      @include font($blue, $regular, 500, 15px, 1.5)
+      border-bottom: 1px solid rgba(15, 79, 143, .1)
+      +transition
+
+      &:hover
+        border-bottom: 1px solid rgba(15, 79, 143, 1)
+        +transition
+
+    > div
+      &:first-child
+        width: 300px
+        flex-shrink: 0
+        margin-right: 40px
+
+      &:last-child
+        .about__statistic__num
+          margin-bottom: 30px
+
+    &__num
+      @include font($pink, $bold, 700, 120px)
+
+      span
+        display: block
+        font-size: 20px
+
+.s_partners
+
+.partners
+  .innerTitle
+    text-align: center
+
+  &__slide
+    max-width: 290px
+    text-align: center
+
+    div
+      border: 1px solid #eee
+      +round
+      width: 250px
+      height: 250px
+      +center
+      margin-bottom: 40px
+
+      img
+        max-width: 180px
+
+    p
+      @include font($textBlack, $regular, 600, 18px, 1.3)

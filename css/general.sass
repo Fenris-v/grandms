@@ -32,6 +32,9 @@ h1
   @include font($textBlack, $bold, 700, 55px, 1)
   margin: 0 0 70px
 
+  span
+    color: $pink
+
 .subtitle
   @include font($textBlack, $regular, 400, 220px, 1)
   position: absolute
@@ -77,6 +80,10 @@ h1
     background: $white
     color: $pink
 
+ul
+  margin: 0
+  padding: 0
+
 .no_list
   list-style-type: none
 
@@ -90,54 +97,54 @@ hr
   padding: 0
   background: rgba(196, 196, 196, 0.2)
 
-//.slick-slide
-//  &:focus
-//    outline: none
-//
-//.slick-dots
-//  padding: 0
-//  +center
-//  list-style: none
-//  margin: 90px 0 0
-//
-//  li
-//    width: 30px
-//    +center
-//
-//    button
-//      padding: 0
-//      font-size: 0
-//      border: none
-//      background: #9F9F9F
-//      width: 12px
-//      height: 12px
-//      +border-radius(6px)
-//      opacity: 0.2
-//      +transition
-//
-//      &:focus
-//        outline: none
-//
-//    &.slick-active
-//      button
-//        +transition
-//        width: 100%
-//        background: #FECA8B
-//        opacity: 1
-//
-//.slick-arrow
-//  border: none
-//  background: none
-//  position: absolute
-//  cursor: pointer
-//  top: -190px
-//
-//  &:focus
-//    outline: none
-//
-//  &.slick-next
-//    right: 0
-//    +transform(rotate(180deg))
-//
-//  &.slick-prev
-//    right: 90px
+.slick-slide
+  &:focus
+    outline: none
+
+.slick-dots
+  padding: 0
+  +center
+  list-style: none
+  margin: 90px 0 0
+
+  li
+    width: 30px
+    +center
+
+    button
+      padding: 0
+      font-size: 0
+      border: none
+      background: #9F9F9F
+      width: 12px
+      height: 12px
+      +border-radius(6px)
+      opacity: 0.2
+      +transition
+
+      &:focus
+        outline: none
+
+    &.slick-active
+      button
+        +transition
+        width: 100%
+        background: #FECA8B
+        opacity: 1
+
+.slick-arrow
+  border: none
+  background: none
+  position: absolute
+  cursor: pointer
+  top: -190px
+
+  &:focus
+    outline: none
+
+  &.slick-next
+    right: 0
+    +transform(rotate(180deg))
+
+  &.slick-prev
+    right: 90px
