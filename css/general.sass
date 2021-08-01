@@ -108,28 +108,34 @@ hr
   margin: 90px 0 0
 
   li
-    width: 30px
+    width: 20px
+    height: 20px
     +center
+    +round
+    border: 1px solid transparent
+
+    &:not(:last-child)
+      margin-right: 25px
 
     button
       padding: 0
       font-size: 0
       border: none
-      background: #9F9F9F
+      background: #CDCDCD
       width: 12px
       height: 12px
-      +border-radius(6px)
-      opacity: 0.2
+      +round
       +transition
 
       &:focus
         outline: none
 
     &.slick-active
+      border-color: $pink
+
       button
         +transition
-        width: 100%
-        background: #FECA8B
+        background: $pink
         opacity: 1
 
 .slick-arrow
@@ -144,7 +150,6 @@ hr
 
   &.slick-next
     right: 0
-    +transform(rotate(180deg))
 
   &.slick-prev
     right: 90px

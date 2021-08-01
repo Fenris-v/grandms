@@ -247,10 +247,14 @@
   .innerTitle
     max-width: 1040px
 
+  &__slider
+    margin: 0 -10px
+
   &__slide
     background: $white
     padding: 45px 0 20px
     position: relative
+    margin: 0 10px
 
     &__wrapper
       padding: 0 45px
@@ -277,6 +281,8 @@
     margin-bottom: 20px
 
 .s_about
+  margin-bottom: 80px
+
   .innerTitle
     padding-top: 90px
 
@@ -293,26 +299,9 @@
 
   img
     position: absolute
-
-    &:first-child
-      left: 0
-      top: 0
-      height: 375px
-      z-index: 5
-
-    &:nth-child(2)
-      position: static
-      display: block
-      margin-top: 100px
-
-    &:nth-child(3)
-      left: 0
-      top: 375px
-      z-index: 5
-
-    &:nth-child(4)
-      left: 150px
-      z-index: 3
+    right: 50%
+    top: 0
+    height: 100%
 
   p
     @include font($textBlack, $regular, 500, 18px, 1.5)
@@ -322,8 +311,12 @@
     display: flex
     align-items: flex-start
 
+    &_small:first-child
+      margin-bottom: 30px
+
     p
       @include font($textBlack, $regular, 500, 15px, 1.5)
+      margin-bottom: 0
 
     a
       @include font($blue, $regular, 500, 15px, 1.5)
@@ -352,6 +345,7 @@
         font-size: 20px
 
 .s_partners
+  margin-bottom: 90px
 
 .partners
   .innerTitle
@@ -360,6 +354,7 @@
   &__slide
     max-width: 290px
     text-align: center
+    margin: 0 35px
 
     div
       border: 1px solid #eee
@@ -367,10 +362,28 @@
       width: 250px
       height: 250px
       +center
-      margin-bottom: 40px
+      margin: 0 auto 40px
 
       img
         max-width: 180px
 
     p
       @include font($textBlack, $regular, 600, 18px, 1.3)
+
+  .slick-arrow
+    border: none
+    background: none
+    position: absolute
+    cursor: pointer
+    top: 26%
+    padding: 0
+    z-index: 1
+
+    &:focus
+      outline: none
+
+    &.slick-next
+      right: 0
+
+    &.slick-prev
+      left: 0
