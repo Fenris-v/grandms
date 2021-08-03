@@ -27,7 +27,41 @@
         </div>
 
         <div class="nav__container">
-          <a href="#" class="btn btn_border btn_burger">Услуги</a>
+          <div class="withSubmenu">
+            <a href="#" class="btn btn_border btn_burger">Услуги</a>
+            <ul class="no_list menu_dropdown">
+              <li>
+                <a href="/kontekstnaya-reklama/">Контекстная реклама</a>
+              </li>
+              <li>
+                <a href="/agentstvo-medijnoj-reklamy/">Медийная реклама</a>
+              </li>
+              <li>
+                <a href="/smm-prodvizhenie/">SMM продвижение</a>
+              </li>
+              <li>
+                <a href="/seo-prodvizhenie/">SEO продвижение</a>
+              </li>
+              <li>
+                <a href="/web-razrabotka/">Web-разработка</a>
+              </li>
+              <li>
+                <a href="/analitika/">Аналитика</a>
+              </li>
+              <li>
+                <a href="/videoreklama/">Видеореклама</a>
+              </li>
+              <li>
+                <a href="/communication/reklama-v-smi/">Реклама в СМИ</a>
+              </li>
+              <li>
+                <a href="/communication/naruzhnaya-reklama/">Наружная реклама</a>
+              </li>
+              <li>
+                <a href="/communication/">ATL-COMPLEX</a>
+              </li>
+            </ul>
+          </div>
 
           <nav>
             <ul class="no_list">
@@ -64,7 +98,7 @@
 
         <a href="#" class="phone no_decor">+7 (812) 622-19-77</a>
 
-        <a href="#" class="btn btn_pink">Обратный звонок</a>
+        <a href="#callback-modal" class="btn btn_pink" data-fancybox-modal>Обратный звонок</a>
 
         <div class="header__hamburger">
           <a class="adaptive-menu-toggle" href="#">
@@ -81,9 +115,41 @@
         <div class="headerNav_adaptive">
           <ul>
             <li>
-              <a href="#">
+              <a href="#" data-dropdown="true">
                 Услуги
               </a>
+              <ul class="menu_dropdown_mobile" style="display: none">
+                <li>
+                  <a href="/kontekstnaya-reklama/">Контекстная реклама</a>
+                </li>
+                <li>
+                  <a href="/agentstvo-medijnoj-reklamy/">Медийная реклама</a>
+                </li>
+                <li>
+                  <a href="/smm-prodvizhenie/">SMM продвижение</a>
+                </li>
+                <li>
+                  <a href="/seo-prodvizhenie/">SEO продвижение</a>
+                </li>
+                <li>
+                  <a href="/web-razrabotka/">Web-разработка</a>
+                </li>
+                <li>
+                  <a href="/analitika/">Аналитика</a>
+                </li>
+                <li>
+                  <a href="/videoreklama/">Видеореклама</a>
+                </li>
+                <li>
+                  <a href="/communication/reklama-v-smi/">Реклама в СМИ</a>
+                </li>
+                <li>
+                  <a href="/communication/naruzhnaya-reklama/">Наружная реклама</a>
+                </li>
+                <li>
+                  <a href="/communication/">ATL-COMPLEX</a>
+                </li>
+              </ul>
             </li>
 
             <li>
@@ -692,8 +758,36 @@
   </div>
 </footer>
 
+<div id="callback-modal" class="modal modal--callback">
+  <div class="modal__title">Заказать обратный звонок</div>
+  <form method="post" action="/webforms/send/" enctype="multipart/form-data" class="modal-form" data-form-ids="popup">
+
+    <input type="hidden" name="system_email_to" value="814">
+    <div class="modal-form__row">
+      <input type="text" name="data[new][vashe_imya]" placeholder="Ваше имя" class="form-input " required="">
+    </div>
+    <div class="modal-form__row">
+      <input type="text" name="data[new][nomer_telefona]" placeholder="Номер телефона"
+             class="form-input form-input--tel" required="">
+    </div>
+
+
+    <input type="hidden" name="system_form_id" value="155">
+    <input type="hidden" name="ref_onsuccess" value="/webforms/posted/155">
+    <div class="modal-form__row">
+      <label><input type="checkbox" class="notice_cheked" checked="" name="notice"> Отправляя заявку, я соглашаюсь на
+        обработку персональных данных</label>
+    </div>
+    <div class="modal-form__row">
+      <input type="submit" class="btn btn_pink" value="Заказать звонок">
+    </div>
+  </form>
+  <button data-fancybox-close="" class="fancybox-close-small" title="Close"></button>
+</div>
+
 <script src="js/libs/jquery.min.js" type="text/javascript"></script>
 <script src="js/libs/slick.min.js" type="text/javascript"></script>
+<script src="js/libs/jquery.fancybox.min.js" type="text/javascript"></script>
 <script src="js/scripts.js" type="text/javascript"></script>
 
 </body>

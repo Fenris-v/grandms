@@ -12,6 +12,9 @@ header
     .header
       padding: 20px 0
 
+  .wrapper_fullHD
+    overflow: unset
+
 .header
   padding: 40px 0
   +space
@@ -66,3 +69,35 @@ header
   @include font($white, $regular, 500, 20px, 1.5)
   max-width: 740px
   margin-bottom: 50px
+
+.withSubmenu
+  position: relative
+
+  &:hover .menu_dropdown
+    display: block
+
+.menu_dropdown
+  background: $darkBlue
+  +box-shadow($shadow: 0 0 10px rgba(255, 255, 255, 0.17))
+  padding: 30px
+  +border-radius(15px)
+  position: absolute
+  left: 15px
+  width: 300px
+  display: none
+
+  li
+    margin-bottom: 20px
+
+  a
+    @include font($white, $regular, 700, 20px)
+    text-decoration: none
+    border-bottom: 1px solid transparent
+    +transition
+
+    &:hover
+      border-bottom: 1px solid $white
+      +transition
+
+.menu_dropdown_mobile
+  padding-left: 20px !important

@@ -140,4 +140,19 @@ $(document).ready(() => {
     $('input[type=file] ~ label').on('click', (e) => {
         $(e.target).siblings('input').trigger('click');
     })
+
+    $('a[data-dropdown="true"]').on('click', (e) => {
+        e.preventDefault();
+
+        $('.menu_dropdown_mobile').slideToggle();
+    });
+
+    /**
+     * FANCYBOX
+     */
+    $('[data-fancybox-modal]').fancybox({
+        trapFocus: true,
+        autoFocus: false,
+        touch: false,
+    });
 });
