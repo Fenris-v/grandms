@@ -27,9 +27,6 @@ header
     display: flex
     align-items: center
 
-    .btn_burger
-      margin-right: 40px
-
   nav
     ul
       display: flex
@@ -75,25 +72,36 @@ header
 
 .withSubmenu
   position: relative
+  margin-right: 40px
+
+  > div
+    padding-bottom: 10px
+    display: inline-block
 
   &:hover .menu_dropdown
     display: block
+    +transform(translateY(0))
+    +transition(all 0.3s ease 0s)
+    visibility: visible
+    opacity: 1
 
 .menu_dropdown
-  background: $darkBlue
-  +box-shadow($shadow: 0 0 10px rgba(255, 255, 255, 0.17))
+  background: #0F2235
+  left: 0
   padding: 30px
-  +border-radius(15px)
+  +border-radius(8px)
   position: absolute
-  left: 15px
   width: 300px
-  display: none
+  +transform(translateY(10px))
+  +transition(all 0.3s ease 0s)
+  visibility: hidden
+  opacity: 0
 
   li:not(:last-child)
     margin-bottom: 20px
 
   a
-    @include font($white, $regular, 700, 20px)
+    @include font($white, $regular, 700, 16px)
     text-decoration: none
     border-bottom: 1px solid transparent
     +transition
@@ -104,3 +112,68 @@ header
 
 .menu_dropdown_mobile
   padding-left: 20px !important
+
+.toggle
+  display: block
+  position: relative
+  width: 16px
+  height: 8px
+  margin: auto 20px auto auto
+
+.toggle-line
+  position: absolute
+  background: $white
+  display: block
+  margin: auto
+  height: 2px
+  width: 100%
+
+.toggle-line--2
+  top: 0
+  @include transition(width 0.2s ease 0.3s)
+
+.toggle-line--3
+  bottom: 0
+  @include transition(width 0.2s ease 0.3s)
+
+.toggle-line--4,
+.toggle-line--5
+  opacity: 0
+  top: 10px
+
+.withSubmenu:hover
+  .toggle-line--4
+    -webkit-transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s
+    transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s
+    -o-transition: opacity 0.2s ease 0.2s, -o-transform 0.2s ease 0.2s
+    -moz-transition: opacity 0.2s ease 0.2s, transform 0.2s ease 0.2s, -moz-transform 0.2s ease 0.2s
+
+  .toggle-line--5
+    -webkit-transition: opacity 0.2s ease 0s, -webkit-transform 0.2s ease 0s
+    transition: opacity 0.2s ease 0s, -webkit-transform 0.2s ease 0s
+    -o-transition: opacity 0.2s ease 0s, -o-transform 0.2s ease 0s
+    -moz-transition: opacity 0.2s ease 0s, transform 0.2s ease 0s, -moz-transform 0.2s ease 0s
+
+  .toggle-line--2
+    width: 0
+    @include transition(width 0.2s ease 0.1s)
+
+  .toggle-line--3
+    width: 0
+    @include transition(width 0.2s ease 0.2s)
+
+  .toggle-line--4
+    opacity: 1
+    +transform(translateY(-7px) rotate(45deg) translateZ(0))
+    -webkit-transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s
+    transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s
+    -o-transition: opacity 0.2s ease 0.2s, -o-transform 0.2s ease 0.2s
+    -moz-transition: opacity 0.2s ease 0.2s, transform 0.2s ease 0.2s, -moz-transform 0.2s ease 0.2s
+
+  .toggle-line--5
+    opacity: 1
+    +transform(translateY(-7px) rotate(-45deg) translateZ(0))
+    -webkit-transition: opacity 0.2s ease 0.4s, -webkit-transform 0.2s ease 0.4s
+    transition: opacity 0.2s ease 0.4s, -webkit-transform 0.2s ease 0.4s
+    -o-transition: opacity 0.2s ease 0.4s, -o-transform 0.2s ease 0.4s
+    -moz-transition: opacity 0.2s ease 0.4s, transform 0.2s ease 0.4s, -moz-transform 0.2s ease 0.4s
