@@ -149,10 +149,24 @@
   &__container
     display: flex
 
+  img
+    width: 200px
+    max-width: 90%
+    margin-bottom: 20px
+
   p
     text-align: center
     @include font($white, $regular, 600, 20px, $line: 1.5)
     max-width: 450px
+    display: none
+
+  a
+    &:hover
+      .services__title
+        display: none
+
+      p
+        display: block
 
   &_left
     width: 35%
@@ -299,18 +313,23 @@
   +space
 
   &_half
-    width: 50%
     min-height: 860px
     overflow: hidden
 
+    &:first-child
+      width: 40%
+
     &:last-child
       padding-left: 80px
+      width: 60%
 
   img
     position: absolute
-    right: 50%
+    left: 0
     top: 0
     height: 100%
+    width: 40%
+    object-fit: cover
 
   p
     @include font($textBlack, $regular, 500, 18px, 1.5)

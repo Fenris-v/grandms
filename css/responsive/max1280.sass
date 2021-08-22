@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1200px)
+@media only screen and (max-width: 1280px)
   .header .nav__container, .header .socials
     display: none
 
@@ -70,18 +70,30 @@
       margin-top: 30px
 
   .about
-    flex-direction: column
-
-    &_half
-      width: 100%
-      min-height: unset
-
-      &:last-child
-        padding: 0
+    //flex-direction: column
+    //
+    //&_half
+    //  width: 100%
+    //  min-height: unset
+    //
+    //  &:last-child
+    //    padding: 0
 
     img
       position: static
       width: 100%
+
+    .about__statistic
+      flex-direction: column
+
+      &_small
+        margin-bottom: 30px
+
+      > div:first-child
+        margin-right: 0
+
+      &_big
+        width: 300px
 
   .s_about .innerTitle
     padding-top: 40px

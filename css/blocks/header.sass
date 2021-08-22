@@ -16,9 +16,12 @@ header
     overflow: unset
 
 .header
-  padding: 40px 0
+  padding: 30px 0
   +space
   align-items: center
+
+  .btn
+    line-height: 60px
 
   .nav__container
     display: flex
@@ -86,7 +89,7 @@ header
   width: 300px
   display: none
 
-  li
+  li:not(:last-child)
     margin-bottom: 20px
 
   a
