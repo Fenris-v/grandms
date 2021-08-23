@@ -158,7 +158,6 @@
     text-align: center
     @include font($white, $regular, 600, 20px, $line: 1.5)
     max-width: 450px
-    display: none
 
   a
     position: relative
@@ -169,13 +168,27 @@
       flex-direction: column
       left: 10px
       right: 10px
+      +transition($transition: all 0.3s ease 0.2s)
+
+      &:last-child
+        opacity: 0
+        +transition($transition: all 0.3s ease 0s)
 
     &:hover
-      .services__title
-        display: none
+      > div
+        position: absolute
+        +center
+        flex-direction: column
+        left: 10px
+        right: 10px
+        +transition($transition: all 0.3s ease 0s)
 
-      p
-        display: block
+        &:first-child
+          opacity: 0
+
+        &:last-child
+          opacity: 1
+          +transition($transition: all 0.3s ease 0.2s)
 
   &_left
     width: 35%
@@ -202,6 +215,14 @@
       background-size: cover !important
       text-align: center
       padding: 20px
+
+      &:hover
+        > div
+          &:first-child
+            opacity: 1 !important
+
+          &:last-child
+            opacity: 0 !important
 
       &__container
         +space
