@@ -1,13 +1,13 @@
 .s_hero
   background: rgb(36, 40, 49)
 
-  .wrapper
-    &_fullHD
-      background-size: cover
-      padding: 260px 0 40px
-      background: url("../images/main/hero_bg.jpg") no-repeat
-      background-size: 100% 100%
-      background-position-x: 90%
+  &_inner
+    margin-bottom: 90px
+
+.hero__slider__item
+  padding: 260px 0 40px
+  background-size: 100% 100% !important
+  background-position-x: 90% !important
 
 .hero
   hr
@@ -42,6 +42,31 @@
 
       p
         @include font($white, $bold, 700, 18px, 1.2)
+
+  &_inner
+    h1
+      font-size: 65px
+      padding-bottom: 60px
+      max-width: 980px
+      border-bottom: 2px solid $white
+      margin-bottom: 60px
+
+    .hero
+      display: flex
+      justify-content: space-between
+
+      &__advantages
+        flex-direction: column
+        max-width: 430px
+        align-items: stretch
+        margin-left: 40px
+        flex-shrink: 0
+        padding: 0
+
+        li
+          padding: 30px
+          border: 1px solid rgba(196, 196, 196, 0.2)
+          margin-right: 0
 
 .s_services
   margin-bottom: 100px
@@ -408,6 +433,41 @@
       span
         display: block
         font-size: 20px
+
+  &_inner
+    .innerTitle
+    text-align: center
+    margin: 0 auto 80px
+
+    .about__statistic
+      justify-content: center
+      margin: 140px auto 0
+
+      > div
+        &:not(:last-child)
+          margin-right: 80px
+
+        &:first-child
+          width: auto
+
+        &:last-child .about__statistic__num
+          margin-bottom: 0
+
+      &__item
+        text-align: left
+        position: relative
+
+        &::before
+          position: absolute
+          left: -20px
+          top: 15px
+          content: url("../images/inner/triangle.svg")
+
+        &:nth-child(2)
+          margin-top: -20px
+
+          &::before
+            top: 35px
 
 .s_partners
   margin-bottom: 90px

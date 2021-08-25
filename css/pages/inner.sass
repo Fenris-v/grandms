@@ -1,0 +1,125 @@
+.s_advantages
+  margin-bottom: 100px
+
+  .innerTitle
+    text-align: center
+    margin-bottom: 170px
+
+.advantages
+  display: flex
+
+  li
+    flex-grow: 1
+    flex-shrink: 0
+    width: calc(100% / 3)
+    border: 1px solid #ECECEC
+    padding: 0 60px 50px
+
+    &:not(:last-child)
+      border-right: none
+
+  &__icon
+    +round
+    background: $pink
+    width: 160px
+    height: 160px
+    margin-top: -80px
+    +center
+    margin-bottom: 50px
+
+    img
+      max-height: 70px
+      max-width: 70px
+      +fit(contain)
+
+.s_approach
+  .wrapper_fullHD
+    background: url("../images/inner/bg.jpg")
+    background-size: cover
+    padding: 80px 0
+
+  .innerTitle
+    text-align: center
+
+.approach
+  position: relative
+
+  ul
+    display: flex
+    margin-bottom: 320px
+    counter-reset: listCounter
+    position: relative
+    z-index: 1
+
+  img
+    margin-bottom: 35px
+    width: 140px
+    height: 140px
+
+  li
+    counter-increment: listCounter
+    position: relative
+
+    &:nth-child(even)
+      +transform(translateY(calc(100% + 90px)))
+
+      &::after
+        top: -40px
+
+    &::before
+      content: '0' counter(listCounter)
+      position: absolute
+      top: 140px
+      left: 80px
+      @include font($white, $bold, 900, 100px, 0.6)
+
+    &::after
+      position: absolute
+      top: 322px
+      content: url("../images/inner/marker.svg")
+      +transform(translate(-50%, -50%))
+      z-index: 1
+      left: 70px
+
+    p
+      position: relative
+      @include font($textBlack, $bold, 700, 20px, 1.2)
+
+  &__line
+    border: none
+    height: 2px
+    background: $white
+    position: absolute
+    left: 0
+    right: 0
+    top: 320px
+
+.s_cases_inner
+  margin-bottom: 80px
+
+  .wrapper_fullHD
+    background: url("../images/inner/bg.jpg")
+    background-size: cover
+    padding: 80px 0
+
+.cases__slider
+  .slick-list
+    margin: 0 -10px
+
+  .slick-arrow
+    top: -165px
+
+  a
+    display: block
+    height: 430px
+    padding: 60px
+    text-align: center
+    background-size: cover !important
+    margin: 0 10px
+
+  .services__title
+    margin: 80px auto 30px
+    width: auto
+
+  p
+    @include font($white, $regular, 500, 20px, 1.3)

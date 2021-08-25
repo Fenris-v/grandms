@@ -26,7 +26,7 @@ $(document).ready(() => {
         dots: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
     });
 
     $('.trust__slider').slick({
@@ -120,6 +120,33 @@ $(document).ready(() => {
                 settings: {
                     slidesToShow: 1,
                     arrows: false,
+                }
+            },
+        ]
+    });
+
+    $('.cases__slider').slick({
+        infinite: true,
+        arrows: true,
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        autoplay: false,
+        nextArrow: '<button type="button" class="slick-next"><svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="35" cy="35" r="34.5" fill="white" stroke="#E3E3E3"/><path d="M33.7049 29L32.2949 30.41L36.8749 35L32.2949 39.59L33.7049 41L39.7049 35L33.7049 29Z" fill="black" fill-opacity="0.54"/></svg></button>',
+        prevArrow: '<button type="button" class="slick-prev"><svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="34.5" transform="matrix(-1 0 0 1 35 35)" fill="white" stroke="#E3E3E3"/><path d="M36.2951 29L37.7051 30.41L33.1251 35L37.7051 39.59L36.2951 41L30.2951 35L36.2951 29Z" fill="black" fill-opacity="0.54"/></svg></button>',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false
                 }
             },
         ]
