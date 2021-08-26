@@ -70,15 +70,6 @@
       margin-top: 30px
 
   .about
-    //flex-direction: column
-    //
-    //&_half
-    //  width: 100%
-    //  min-height: unset
-    //
-    //  &:last-child
-    //    padding: 0
-
     img
       position: static
       width: 100%
@@ -117,3 +108,45 @@
     width: 100%
     text-align: center
     margin-top: 30px
+
+  .hero_inner
+    .hero
+      flex-direction: column
+
+      &__advantages
+        flex-direction: row
+        margin-left: 0
+        max-width: none
+
+        li
+          width: calc(100% / 3)
+
+  .approach
+    ul
+      flex-wrap: wrap
+      justify-content: space-between
+      margin-bottom: 0
+
+    li
+      width: 30%
+      margin-bottom: 30px
+
+      &:nth-child(even)
+        +transform(none)
+
+      &::after
+        content: none
+
+    &__line
+      display: none
+
+  .about_inner
+    .innerTitle
+      margin-bottom: 30px
+
+    .about__statistic
+      margin-top: 20px
+      flex-direction: row
+
+      > div:not(:last-child)
+        margin-right: 80px
