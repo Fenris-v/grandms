@@ -182,4 +182,28 @@ $(document).ready(() => {
         autoFocus: false,
         touch: false,
     });
+
+    /**
+     * FILE INPUT
+     */
+    $('input[type="file"]').on('change', (e) => {
+        let input = $(e.target);
+        let container = input.parents('form');
+        let name = e.currentTarget.files[0].name;
+
+        if (!name) {
+            return;
+        }
+
+        container.find(('.form__file-name')).text(name);
+        container.find('.btn__delete-file').css('display', 'inline-block');
+    });
+
+    $('.btn.btn__delete-file').on('click', (e) => {
+        let parent = $(e.target).parents('form');
+
+        parent.find('input[type="file"]').val(null);
+        parent.find('.form__file-name').text('');
+        parent.find('.btn__delete-file').css('display', 'none');
+    });
 });

@@ -118,7 +118,8 @@ li.input__container
 
   div:last-child
     margin-left: auto
-    display: inline-flex
+    display: flex
+    flex-direction: column
 
   input[type="file"]
     display: none
@@ -130,3 +131,11 @@ li.input__container
       text-transform: uppercase
       +border-radius(25px)
       cursor: pointer
+
+.btn__delete-file
+  padding: 0
+  margin-left: 4px
+  background: none
+  border: none
+  line-height: 15px
+  cursor: pointer
