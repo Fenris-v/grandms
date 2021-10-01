@@ -1,0 +1,180 @@
+.hero_inner
+  .hero
+    &__advantages
+      &_bordered
+        margin-top: -60px
+
+        li
+          flex-direction: row-reverse
+          border: 1px solid rgba(255, 255, 255, .1)
+          width: 330px
+          padding: 5px 5px 5px 40px
+          margin-bottom: 10px
+          justify-content: space-between
+          +border-radius(40px)
+
+          img
+            margin-right: 0
+
+.s_needed
+  margin-bottom: 100px
+
+.needed
+  &__list
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 20px
+    margin-bottom: 40px
+
+    &_half
+      background: $grey
+      padding: 60px
+
+      &:last-child
+        background: $blue
+
+        .needed__list
+          &__title
+            color: $white
+
+        ul
+          li
+            color: $white
+
+            &::before
+              background: $white
+
+    &__title
+      @include font($textBlack, $bold, 700, 42px, 1.1)
+      margin-bottom: 30px
+
+    ul
+      li
+        margin-bottom: 20px
+        display: flex
+        @include font($textBlack, $regular, 500, 18px, 1.4)
+
+        &:before
+          width: 17px
+          height: 2px
+          background: $pink
+          content: ''
+          margin-right: 20px
+          margin-top: 12px
+
+  &__offer
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .btn
+      flex-shrink: 0
+      margin-left: 50px
+
+    p
+      @include font($textBlack, $bold, 700, 36px, 1)
+      display: flex
+      align-items: center
+
+      svg
+        margin-right: 35px
+
+.s_servicesGrid, .s_possibilities
+  margin-bottom: 100px
+
+  .innerTitle
+    max-width: 1000px
+    text-align: center
+    margin: 0 auto 100px
+
+.servicesGrid
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-column-gap: 20px
+
+    img
+      margin-bottom: 50px
+      width: 100%
+      height: 390px
+      +cover
+
+    &__content
+      padding-right: 30px
+
+    &__title
+      @include font($textBlack, $bold, 700, 32px, 1.1)
+      margin-bottom: 35px
+
+    p
+      @include font($textBlack, $regular, 500, 18px, 1.4)
+
+    &_bg
+      > li
+        background: $darkGrey
+
+        &:first-child
+          background: $darkBlue
+
+        &:last-child
+          background: $blue
+
+        ul
+          li
+            @include font($white, $regular, 500, 18px, 1.4)
+            margin-bottom: 20px
+            display: flex
+
+            &::before
+              margin-top: 11px
+              content: ''
+              height: 2px
+              width: 17px
+              background: $white
+              flex-shrink: 0
+              margin-right: 20px
+
+      .servicesGrid__list
+        &__content
+          padding: 0 50px 50px
+
+        &__title
+          color: $white
+
+.s_possibilities
+  .wrapper_fullHD
+    background: url(../images/inner/bg.jpg)
+    background-size: cover
+    padding: 80px 0
+
+.possibilities
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-column-gap: 50px
+    grid-row-gap: 30px
+    max-width: 1450px
+    margin: 0 auto
+
+    li
+      background: $pink
+      +center
+      flex-direction: column
+      padding: 75px 30px
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+
+      &:nth-child(2), &:nth-child(7)
+        background: $darkGrey
+
+      &:nth-child(3), &:nth-child(6)
+        background: $darkBlue
+
+      &:nth-child(4), &:nth-child(5)
+        background: $blue
+
+      img
+        margin-bottom: 30px
+
+      p
+        text-align: center
+        @include font($white, $bold, 700, 24px, 1.4)
