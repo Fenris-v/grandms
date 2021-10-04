@@ -125,6 +125,33 @@ $(document).ready(() => {
         ]
     });
 
+    $('.feedbacks__slider_about-page').slick({
+        infinite: true,
+        arrows: true,
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        nextArrow: '<button type="button" class="slick-next"><svg width="70" height="70" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="25" transform="matrix(-1 0 0 1 25 25)" fill="#fff"/><path d="M21.624 18.9025L22.9515 17.5751L30.3765 25.0001L22.9515 32.425L21.624 31.0975L27.7215 25.0001L21.624 18.9025H21.624Z" fill="#6f6f6f"/></svg></button>',
+        prevArrow: '<button type="button" class="slick-prev"><svg width="70" height="70" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="25" fill="#fff"/><path d="M28.376 18.9025L27.0485 17.5751L19.6235 25.0001L27.0485 32.425L28.376 31.0975L22.2785 25.0001L28.376 18.9025H28.376Z" fill="#6f6f6f"/></svg></button>',
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                }
+            },
+        ]
+    });
+
     $('.cases__slider').slick({
         infinite: true,
         arrows: true,
@@ -151,6 +178,47 @@ $(document).ready(() => {
             },
         ]
     });
+
+    $('.team__slider').slick({
+        infinite: true,
+        arrows: true,
+        dots: false,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        autoplay: false,
+        nextArrow: '<button type="button" class="slick-next"><svg width="70" height="70" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="25" transform="matrix(-1 0 0 1 25 25)" fill="#fff"/><path d="M21.624 18.9025L22.9515 17.5751L30.3765 25.0001L22.9515 32.425L21.624 31.0975L27.7215 25.0001L21.624 18.9025H21.624Z" fill="#6f6f6f"/></svg></button>',
+        prevArrow: '<button type="button" class="slick-prev"><svg width="70" height="70" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="25" fill="#fff"/><path d="M28.376 18.9025L27.0485 17.5751L19.6235 25.0001L27.0485 32.425L28.376 31.0975L22.2785 25.0001L28.376 18.9025H28.376Z" fill="#6f6f6f"/></svg></button>',
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 3,
+                    arrows: false,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false,
+                    dots: true,
+                }
+            },
+        ]
+    })
+    .on('setPosition', function (event, slick) {
+        slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+    });
+
 
     /**
      * HAMBURGER
