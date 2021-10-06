@@ -1223,6 +1223,19 @@ li.input__container {
   border: 1px solid rgba(196, 196, 196, 0.2);
   margin-right: 0;
 }
+.hero_web .hero__slider__item, .hero_development .hero__slider__item {
+  padding-top: 180px;
+}
+.hero_web .breadcrumbs, .hero_development .breadcrumbs {
+  margin-bottom: 56px;
+}
+.hero_web .hero__advantages li, .hero_development .hero__advantages li {
+  justify-content: center;
+  text-align: center;
+}
+.hero_web .hero__advantages li img, .hero_development .hero__advantages li img {
+  width: unset;
+}
 
 .s_services {
   margin-bottom: 100px;
@@ -2645,6 +2658,28 @@ li.input__container {
   .about_inner .about__statistic > div:not(:last-child) {
     margin-right: 0;
   }
+
+  .seo-complex {
+    flex-flow: column;
+  }
+  .seo-complex__text {
+    margin-right: 0;
+  }
+  .seo-complex img {
+    margin-top: 20px;
+    width: unset;
+  }
+
+  .seo-works ul {
+    justify-content: space-between;
+  }
+  .seo-works li::before {
+    width: 140px;
+    height: 140px;
+  }
+  .seo-works li p {
+    max-width: 220px;
+  }
 }
 @media only screen and (max-width: 767px) {
   .about .about__statistic {
@@ -2713,6 +2748,10 @@ li.input__container {
 
   .submit__container div:last-child {
     margin: 0 auto;
+  }
+
+  .seo-complex img {
+    display: none;
   }
 }
 

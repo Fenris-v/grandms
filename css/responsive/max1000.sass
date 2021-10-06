@@ -89,3 +89,21 @@
 
       > div:not(:last-child)
         margin-right: 0
+
+  .seo-complex
+    flex-flow: column
+    &__text
+      margin-right: 0
+    img
+      margin-top: 20px
+      width: unset
+
+  .seo-works
+    ul
+      justify-content: space-between
+    li
+      &::before
+        width: 140px
+        height: 140px
+      p
+        max-width: 220px
