@@ -198,7 +198,7 @@ $(document).ready(() => {
                 }
             },
             {
-                breakpoint: 640,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 2,
                     arrows: false,
@@ -208,7 +208,7 @@ $(document).ready(() => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     arrows: false,
                     dots: true,
                 }
