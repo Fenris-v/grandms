@@ -2205,6 +2205,7 @@ li.input__container {
   display: flex;
   flex-flow: wrap;
   gap: 60px;
+  justify-content: space-between;
 }
 .seo-works li {
   counter-increment: listCounter;
@@ -2226,7 +2227,7 @@ li.input__container {
 }
 .seo-works li p {
   margin-top: 36px;
-  max-width: 280px;
+  max-width: 300px;
   font-size: 22px;
   line-height: 1.3;
 }
@@ -2749,7 +2750,7 @@ li.input__container {
     height: 140px;
   }
   .seo-works li p {
-    max-width: 220px;
+    max-width: 250px;
   }
 
   .since2006__text p {
