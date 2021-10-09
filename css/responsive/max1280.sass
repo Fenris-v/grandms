@@ -121,6 +121,17 @@
         li
           width: calc(100% / 3)
 
+        &.hero__advantages_bordered
+          flex-wrap: wrap
+          justify-content: space-between
+
+          li
+            width: 19.5%
+
+            &:last-child
+              margin-right: auto
+              margin-left: 0.625%
+
   .approach
     ul
       flex-wrap: wrap
@@ -181,3 +192,38 @@
     margin-right: 40px
     h2
       font-size: 40px
+
+  .cases_inner
+    .title__container .btn
+      margin-right: 0
+
+  .possibilities__list
+    grid-template-columns: repeat(3, 1fr)
+
+  .servicesGrid__list
+    grid-template-columns: repeat(2, 1fr)
+
+  .hero_inner .hero__advantages.hero__cases
+    position: static
+
+    li
+      width: 100%
+
+  .anchors__list
+    justify-content: flex-start
+
+    li
+      &:not(:last-child)
+        margin-right: 30px
+
+      a
+        padding: 0
+
+        &:hover::after
+          content: none
+
+  .case__about
+    flex-direction: column
+
+    img
+      margin: 0 auto 30px

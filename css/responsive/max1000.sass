@@ -70,6 +70,15 @@
   .hero_inner .hero__advantages
     flex-direction: column
 
+    &.hero__advantages_bordered
+      flex-direction: row
+
+      li
+        width: 33%
+
+        &:last-child
+          margin-left: 0
+
     li
       width: auto
       max-width: 400px
@@ -149,3 +158,57 @@
     p
       margin-top: -12px
       font-size: 20px
+
+  .needed__list
+    grid-template-columns: repeat(1, 1fr)
+
+  .needed__offer
+    flex-direction: column
+    align-items: flex-start
+
+    .btn
+      margin-left: 0
+      margin-top: 30px
+
+  .possibilities__list
+    grid-gap: 30px
+    grid-template-columns: repeat(2, 1fr)
+
+  .servicesGrid__list img
+    margin-bottom: 30px
+
+  .servicesGrid__list_bg .servicesGrid__list__content
+    padding: 0 30px 30px
+
+  .case__about__content h2
+    font-size: 35px
+    margin-bottom: 30px
+
+  .case__target
+    h3
+      font-size: 30px
+
+    img
+      display: none
+
+  .case__adv__title, .case__smm__title, .case__seo__title
+    font-size: 35px
+
+  .case__adv, .case__smm, .case__seo
+    flex-direction: column
+
+    &_half
+      width: 100%
+
+    .wrapper_half
+      height: auto
+
+  .case__smm_half .wrapper_half
+    padding-left: 20px
+
+  .case__result ul
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 30px
+
+    li
+      font-size: 22px

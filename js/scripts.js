@@ -163,7 +163,7 @@ $(document).ready(() => {
         prevArrow: '<button type="button" class="slick-prev"><svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="34.5" transform="matrix(-1 0 0 1 35 35)" fill="white" stroke="#E3E3E3"/><path d="M36.2951 29L37.7051 30.41L33.1251 35L37.7051 39.59L36.2951 41L30.2951 35L36.2951 29Z" fill="black" fill-opacity="0.54"/></svg></button>',
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1280,
                 settings: {
                     slidesToShow: 2,
                     arrows: false
