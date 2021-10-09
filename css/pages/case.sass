@@ -1,0 +1,203 @@
+.hero_inner
+  .hero__advantages.hero__cases
+    position: absolute
+    bottom: 0
+    right: 0
+    max-width: 420px
+
+    li
+      flex-direction: column
+      align-items: flex-start
+
+      a
+        @include font(rgba(255, 255, 255, .6), $regular, 500, 16px, 2)
+        margin-bottom: 10px
+        +space-nw
+        width: 100%
+        text-decoration: none
+
+        &::after
+          content: url("icons/arrow_white.svg")
+
+        &:hover
+          text-decoration: underline
+
+      p
+        font-size: 24px
+
+.anchors__list
+  margin-bottom: 100px
+  +space
+  border-bottom: 1px solid $anotherGrey3
+
+  li
+    a
+      padding: 30px 0
+      @include font($textBlack, $bold, 700, 24px, 2.1)
+      text-decoration: none
+      display: block
+      position: relative
+
+      &:hover
+        color: $darkGreyAnother
+
+        &::after
+          position: absolute
+          bottom: -1px
+          left: 0
+          width: 100%
+          content: ''
+          border-bottom: 1px solid $darkGreyAnother
+          z-index: 1
+
+.s_case__about
+  margin-bottom: 80px
+
+.case__about
+  +space-nw
+  align-items: flex-start
+
+  img
+    width: 410px
+    +fit(contain)
+    margin-right: 100px
+    flex-shrink: 0
+
+  &__content
+    h2
+      @include font($textBlack, $bold, 700, 55px, 1)
+      margin: 0 0 50px
+
+  p
+    @include font($textBlack, $regular, 500, 18px, 1.7)
+    margin-bottom: 30px
+
+  .case__about__desc
+    font-size: 24px
+    line-height: 1.5
+
+.s_case__target
+  margin-bottom: 100px
+
+.case__target
+  background: $caseBg
+  position: relative
+  padding: 60px
+
+  img
+    position: absolute
+    bottom: 0
+    right: 60px
+
+  h3
+    @include font($textBlack, $bold, 700, 42px, 1)
+    margin: 0 0 30px
+
+  ul
+    li
+      margin-bottom: 20px
+      display: flex
+      @include font($textBlack, $regular, 500, 18px, 1.4)
+
+      &:before
+        width: 17px
+        height: 2px
+        background: $pink
+        content: ''
+        margin-right: 20px
+        margin-top: 12px
+        flex-shrink: 0
+
+.case__adv, .case__smm, .case__seo
+  background: $blue
+  display: flex
+  min-height: 800px
+
+  &_half
+    width: 50%
+    flex-shrink: 0
+
+    .wrapper_half
+      padding: 60px 80px 60px 20px
+
+    img
+      width: 100%
+      height: 100%
+      +cover
+
+  &__title
+    @include font($white, $bold, 700, 45px, 1)
+    margin-bottom: 50px
+
+  ul
+    li
+      margin-bottom: 20px
+      display: flex
+      @include font($white, $regular, 500, 20px, 1.4)
+
+      &:before
+        width: 10px
+        height: 10px
+        +round
+        background: $pink
+        content: ''
+        margin-right: 20px
+        margin-top: 10px
+        flex-shrink: 0
+
+.case__smm
+  flex-direction: row-reverse
+
+  &_half
+    background: url("../images/case/smm.png")
+    background-size: cover
+
+    .wrapper_half
+      padding: 60px 20px 60px 80px
+
+.case__smm, .case__seo
+  background: transparent
+
+  &__title
+    color: $textBlack
+
+  ul
+    li
+      color: $textBlack
+
+.case__seo
+  &_half
+    background: url("../images/case/seo.jpg")
+    background-size: cover
+
+#case_tools
+  background: $toolsBg
+  padding: 100px 0 80px
+
+.s_case__result
+  margin-bottom: 100px
+
+.case__result
+  .innerTitle
+    text-align: center
+
+  ul
+    display: grid
+    grid-template-columns: repeat(3, 450px)
+    grid-column-gap: 50px
+    grid-row-gap: 140px
+
+    li
+      +center
+      flex-direction: column
+      text-align: center
+      @include font($textBlack, $bold, 600, 30px, 1.3)
+      width: 450px
+
+  &__icon
+    background: $pink
+    +center
+    width: 190px
+    height: 190px
+    +round
+    margin-bottom: 50px
